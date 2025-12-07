@@ -32,3 +32,13 @@ __pycache__/    # Python bytecode cache
 # Ignore all text files, but keep "license.txt"
 *.txt
 !license.txt
+
+# Ignore Datasets and Weights (Too large for Git)
+weights/
+Task03_Liver_rs/
+outputs/
+
+# Ignore Logs and temporary files
+logs/
+__pycache__/
+*.ipynb_checkpoints
