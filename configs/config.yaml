@@ -1,0 +1,46 @@
+# Configuration file for 3D Liver Tumor Segmentation
+
+# Data configuration
+data:
+  data_dir: "Task03_Liver_rs"
+  train_split: 0.9
+  patch_size: [256, 256, 200]  # [H, W, D]
+  patch_size_training: [96, 96, 96]  # Patch size for training
+  patch_overlap: [8, 8, 8]  # Overlap for inference
+  sampler_type: "label"  # "label" or "uniform"
+  label_probabilities:
+    0: 0.2  # Background
+    1: 0.3  # Liver
+    2: 0.5  # Tumor
+  augmentation: true
+
+# Model configuration
+model:
+  name: "UNet"
+
+# Training configuration
+training:
+  batch_size: 2
+  learning_rate: 0.0001
+  max_epochs: 100
+  gpus: 1
+  num_workers: 4
+  max_length: 40  # Queue max length
+  samples_per_volume: 5
+  log_every_n_steps: 1
+  log_images_every: 50
+  save_top_k: 10
+
+# Testing configuration
+testing:
+  batch_size: 4
+  num_samples: null  # null for all samples
+
+# Output configuration
+output:
+  output_dir: "outputs"
+  logs_dir: "logs"
+  checkpoints_dir: "checkpoints"
+  predictions_dir: "predictions"
+  visualizations_dir: "visualizations"
+

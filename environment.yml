@@ -1,0 +1,23 @@
+name: liver-segmentation
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch>=2.0.0
+  - pytorch-cuda=11.8
+  - cudatoolkit=11.8
+  - pip
+  - numpy<2.0
+  - matplotlib>=3.4.0
+  - pyyaml>=5.4.0
+  - pip:
+    - torchio>=0.18.0
+    - pytorch-lightning>=2.0.0
+    - nibabel>=3.2.0
+    - celluloid>=0.2.0
+    - tensorboard>=2.7.0
+    - gradio>=4.0.0
+
