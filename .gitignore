@@ -1,0 +1,34 @@
+# --- OS & System Files (Always ignore these) ---
+.DS_Store       # macOS folder metadata
+Thumbs.db       # Windows thumbnail cache
+ehthumbs.db     # Windows thumbnail cache
+
+# --- IDE & Editor Configuration ---
+.vscode/        # VS Code project settings
+.idea/          # JetBrains (IntelliJ, PyCharm) settings
+*.swp           # Vim swap files
+
+# --- Logs & Databases ---
+*.log           # All log files
+*.sqlite        # SQLite databases
+
+# --- Dependency Directories (NEVER commit these) ---
+node_modules/   # Node.js dependencies
+/venv/          # Python virtual environment (at root)
+env/            # Alternative Python env name
+__pycache__/    # Python bytecode cache
+*.py[cod]       # Python compiled files (.pyc, .pyo, .pyd)
+
+# --- Build Outputs ---
+/dist/          # Distribution folder
+/build/         # Build folder
+/bin/           # Binary folder
+
+# --- Environment Variables (Security Risk) ---
+.env            # Contains API keys/secrets (CRITICAL to ignore)
+.env.local
+
+# --- Exceptions (Negation Example) ---
+# Ignore all text files, but keep "license.txt"
+*.txt
+!license.txt
